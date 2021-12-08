@@ -93,9 +93,9 @@ if (strtotime(date('G.i')) >= strtotime($nautical_twighlight_begin) && strtotime
   $dayPartNautical = "night";
 }
 if (strtotime(date('G.i')) >= strtotime($astronomical_twighlight_begin) && strtotime(date('G.i')) < strtotime($astronomical_twighlight_end)) {
-  $dayPartNautical = "day";
+  $dayPartAstronomical = "day";
 } else {
-  $dayPartNautical = "night";
+  $dayPartAstronomical = "night";
 }
 #end if
 ?>
