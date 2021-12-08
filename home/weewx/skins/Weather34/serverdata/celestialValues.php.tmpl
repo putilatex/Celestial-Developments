@@ -39,61 +39,71 @@
   #end if
 #end if
 #if $almanac.hasExtras
-$astronomical_twighlight_begin	=	"$almanac(horizon=-18).sun(use_center=1).rise";	  
-$nautical_twighlight_begin		=	"$almanac(horizon=-12).sun(use_center=1).rise";
-$civil_twighlight_begin 		= 	"$almanac(horizon=-6).sun(use_center=1).rise";
-$sun_rise 						= 	"$almanac.sun.rise.format(None_string=$sun_None)";
-$sun_meridian_transit			= 	"$almanac.sun.transit";
-$sun_set 						= 	"$almanac.sun.set.format(None_string=$sun_None)";
-$civil_twighlight_end 			= 	"$almanac(horizon=-6).sun(use_center=1).set";
-$nautical_twighlight_end 		= 	"$almanac(horizon=-12).sun(use_center=1).set";
-$astronomical_twighlight_end 	= 	"$almanac(horizon=-18).sun(use_center=1).set";
-$sun_azimuth					= 	"$almanac.sun.az";          
-$sun_alt						=	"$almanac.sun.alt";          
-$sun_right_ascension			= 	"$almanac.sun.ra";          
-$sun_declination				= 	"$almanac.sun.dec";
-$sidereal_time					=	"$almanac.sidereal_time";          
-$winter_solstice				=	"$almanac.next_winter_solstice";
-$summer_solstice				=	"$almanac.next_summer_solstice";
-$vernal_equinox					=	"$almanac.next_vernal_equinox";
-$autumnal_equinox				=	"$almanac.next_autumnal_equinox";
-$total_daylight					=	"$daylight_str";
-$moon_rise						=	"$almanac.moon.rise";
-$moon_meridian_transit			=	"$almanac.moon.transit";
-$moon_set						=	"$almanac.moon.set";
-$moon_azimuth					= 	"$almanac.moon.az";          
-$moon_altitude					= 	"$almanac.moon.alt";          
-$moon_right_ascension			= 	"$almanac.moon.ra";          
-$moon_declination				= 	"$almanac.moon.dec";         
-$new_moon						=	"$almanac.next_new_moon";
-$first_quarter_moon				=	"$almanac.next_first_quarter_moon";
-$full_moon						=	"$almanac.next_full_moon";
-$last_quarter_moon				=	"$almanac.next_last_quarter_moon";
-$moon_phase						=	"$almanac.moon_phase";
-$moon_fullness					=	"$almanac.moon_fullness% full";
-$mercury_hlongitude				=	"$almanac.mercury.hlong";
-$venus_hlongitude				=	"$almanac.venus.hlong";
-$earth_hlongitude				=	"$almanac.sun.hlong";
-$mars_hlongitude				=	"$almanac.mars.hlong";
-$jupiter_hlongitude				=	"$almanac.jupiter.hlong";
-$saturn_hlongitude				=	"$almanac.saturn.hlong";
-$uranus_hlongitude				=	"$almanac.uranus.hlong";
-$neptune_hlongitude				=	"$almanac.neptune.hlong";
-$pluto_hlongitude				=	"$almanac.pluto.hlong";
-if (strtotime(date('G.i')) >= strtotime($civil_twighlight_begin) && strtotime(date('G.i')) < strtotime($civil_twighlight_end)) {
-  $dayPartCivil = "day";
+$astronomical_twighlight_begin	    =	"$almanac(horizon=-18).sun(use_center=1).rise";	  
+$nautical_twighlight_begin		      =	"$almanac(horizon=-12).sun(use_center=1).rise";
+$civil_twighlight_begin 		        = "$almanac(horizon=-6).sun(use_center=1).rise";
+$sun_rise 						              = "$almanac.sun.rise.format(None_string=$sun_None)";
+$sun_meridian_transit			          = "$almanac.sun.transit";
+$sun_set 						                = "$almanac.sun.set.format(None_string=$sun_None)";
+$civil_twighlight_end 			        = "$almanac(horizon=-6).sun(use_center=1).set";
+$nautical_twighlight_end 		        = "$almanac(horizon=-12).sun(use_center=1).set";
+$astronomical_twighlight_end 	      = "$almanac(horizon=-18).sun(use_center=1).set";
+$sun_azimuth					              = "$almanac.sun.az";          
+$sun_alt						                =	"$almanac.sun.alt";          
+$sun_right_ascension			          = "$almanac.sun.ra";          
+$sun_declination				            = "$almanac.sun.dec";
+$sidereal_time					            =	"$almanac.sidereal_time";          
+$winter_solstice				            =	"$almanac.next_winter_solstice";
+$summer_solstice				            =	"$almanac.next_summer_solstice";
+$vernal_equinox					            =	"$almanac.next_vernal_equinox";
+$autumnal_equinox				            =	"$almanac.next_autumnal_equinox";
+$total_daylight					            =	"$daylight_str";
+$moon_rise						              =	"$almanac.moon.rise";
+$moon_meridian_transit			        =	"$almanac.moon.transit";
+$moon_set						                =	"$almanac.moon.set";
+$moon_azimuth					              = "$almanac.moon.az";          
+$moon_altitude					            = "$almanac.moon.alt";          
+$moon_right_ascension			          = "$almanac.moon.ra";          
+$moon_declination				            = "$almanac.moon.dec";         
+$new_moon						                =	"$almanac.next_new_moon";
+$first_quarter_moon				          =	"$almanac.next_first_quarter_moon";
+$full_moon						              =	"$almanac.next_full_moon";
+$last_quarter_moon				          =	"$almanac.next_last_quarter_moon";
+$moon_phase						              =	"$almanac.moon_phase";
+$moon_fullness					            =	"$almanac.moon_fullness% full";
+$mercury_hlongitude				          =	"$almanac.mercury.hlong";
+$venus_hlongitude				            =	"$almanac.venus.hlong";
+$earth_hlongitude				            =	"$almanac.sun.hlong";
+$mars_hlongitude				            =	"$almanac.mars.hlong";
+$jupiter_hlongitude				          =	"$almanac.jupiter.hlong";
+$saturn_hlongitude				          =	"$almanac.saturn.hlong";
+$uranus_hlongitude				          =	"$almanac.uranus.hlong";
+$neptune_hlongitude				          =	"$almanac.neptune.hlong";
+$pluto_hlongitude				            =	"$almanac.pluto.hlong";
+
+if (
+    strtotime(date("G.i")) >= strtotime($civil_twighlight_begin) &&
+    strtotime(date("G.i")) < strtotime($civil_twighlight_end)
+) {
+    $dayPartCivil = "day";
 } else {
-  $dayPartCivil = "night";
+    $dayPartCivil = "night";
 }
-if (strtotime(date('G.i')) >= strtotime($nautical_twighlight_begin) && strtotime(date('G.i')) < strtotime($nautical_twighlight_end)) {
-  $dayPartNautical = "day";
+if (
+    strtotime(date("G.i")) >= strtotime($nautical_twighlight_begin) &&
+    strtotime(date("G.i")) < strtotime($nautical_twighlight_end)
+) {
+    $dayPartNautical = "day";
 } else {
-  $dayPartNautical = "night";
+    $dayPartNautical = "night";
 }
-if (strtotime(date('G.i')) >= strtotime($astronomical_twighlight_begin) && strtotime(date('G.i')) < strtotime($astronomical_twighlight_end)) {
-  $dayPartAstronomical = "day";
+if (
+    strtotime(date("G.i")) >= strtotime($astronomical_twighlight_begin) &&
+    strtotime(date("G.i")) < strtotime($astronomical_twighlight_end)
+) {
+    $dayPartAstronomical = "day";
 } else {
-  $dayPartAstronomical = "night";
+    $dayPartAstronomical = "night";
 }
 #end if
 ?>
